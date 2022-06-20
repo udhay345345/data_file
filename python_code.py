@@ -62,5 +62,7 @@ for i in links:
     y = webscrape(i)
     output[str(count)] = y
     count += 1
+  
+#response is output in json format, where output is in python
 response = json.dumps(output)
 print(response)

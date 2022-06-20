@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 import json
+#function to webscrape data
 def webscrape(link):
     try:
         page = requests.get(link)
@@ -31,6 +32,9 @@ def webscrape(link):
         items.append({"item_name":item_name,"item_description":item_description,"item_price":item_price,"item_image":item_image})
     result["menu_items"]= items
     return result
+#function compeleted
+
+#given links in data sample_json links
 given_links = [
     "https://www.talabat.com/uae/restaurant/621133/ginos-deli-jlt?aid=1308",
     "https://www.talabat.com/uae/restaurant/645430/pasta-della-nona-jlt-jumeirah-lakes-towers?aid=1308",
@@ -39,6 +43,7 @@ given_links = [
     "https://www.talabat.com/uae/restaurant/621796/pizza-di-rocco-jumeirah-lakes-towers--jlt?aid=1308"
 ]
 
+#5 urls randomly chosen
 my_urls = [
 'https://www.talabat.com/uae/restaurant/648008/jaffer-bhais-restaurant-al-barsha-1?aid=1308',
 'https://www.talabat.com/uae/restaurant/41433/yin-yang-restaurant-jumeriah-lakes-towers--jlt?aid=1308',
@@ -47,6 +52,7 @@ my_urls = [
 'https://www.talabat.com/uae/restaurant/606838/everyday-roastery-coffee-dubai-marina?aid=1308'
 ]
 
+#all urls 
 links = given_links + my_urls
 
 
